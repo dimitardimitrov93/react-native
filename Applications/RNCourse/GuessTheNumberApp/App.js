@@ -4,6 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import { StartGameScreen } from "./screens/StartGameScreen";
 import { GameScreen } from "./screens/GameScreen";
+import { colors } from "./constants/colors";
 
 export default function App() {
   const [userNumber, setUserNumber] = useState();
@@ -13,13 +14,16 @@ export default function App() {
   };
 
   const screen = userNumber ? (
-    <GameScreen />
+    <GameScreen {...{ userNumber }} />
   ) : (
     <StartGameScreen onPickNumber={pickedNumberHandler} />
   );
 
   return (
-    <LinearGradient style={styles.rootScreen} colors={["#4e0329", "#ddb52f"]}>
+    <LinearGradient
+      style={styles.rootScreen}
+      colors={[colors.primary700, colors.accent500]}
+    >
       <ImageBackground
         style={styles.backgroundImage}
         resizeMode="cover"
