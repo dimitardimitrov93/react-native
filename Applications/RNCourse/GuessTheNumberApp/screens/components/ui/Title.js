@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
   title: {
     padding: 12,
     marginBottom: 12,
+    fontFamily: "open-sans-bold",
     fontSize: 24,
-    fontWeight: "bold",
     color: "white",
     textAlign: "center",
     borderWidth: 2,
