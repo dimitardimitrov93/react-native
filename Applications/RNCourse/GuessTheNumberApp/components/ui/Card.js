@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import { colors } from "../../../constants/colors";
+import { colors } from "../../constants/colors";
 
 export const Card = ({ children }) => {
   return <View style={styles.rootContainer}>{children}</View>;
