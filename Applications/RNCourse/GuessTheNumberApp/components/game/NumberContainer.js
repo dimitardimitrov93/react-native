@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Dimensions } from "react-native";
 import { colors } from "../../constants/colors";
 
 export const NumberContainer = ({ children }) => {
@@ -9,10 +9,12 @@ export const NumberContainer = ({ children }) => {
   );
 };
 
+const deviceWidth = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   container: {
-    padding: 24,
-    margin: 24,
+    padding: deviceWidth < 450 ? 12 : 24,
+    margin: deviceWidth < 450 ? 12 : 24,
     borderWidth: 4,
     borderColor: colors.accent500,
     borderRadius: 8,
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
   },
   numberText: {
     fontFamily: "open-sans-bold",
-    fontSize: 36,
+    fontSize: deviceWidth < 450 ? 28 : 36,
     color: colors.accent500,
   },
 });

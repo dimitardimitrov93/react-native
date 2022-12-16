@@ -6,6 +6,8 @@ export const Title = ({ children }) => {
 
 const styles = StyleSheet.create({
   title: {
+    width: 300,
+    maxWidth: "80%",
     padding: 12,
     marginBottom: 12,
     fontFamily: "open-sans-bold",
